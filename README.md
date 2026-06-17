@@ -2,7 +2,8 @@
 
 > A modern, feature-rich personal finance tracker available as both a **web application** and a **desktop GUI application**. Track expenses, manage budgets, set savings goals, and generate financial reports — all with a stunning brutalist editorial design.
 
----
+--- TO ACTUALLY ACCESS THE WEBSITE USE API Key from anywhere you like 
+
 
 ## 📸 Overview
 
@@ -181,3 +182,9 @@ This project is licensed under the **GNU General Public License v3.0** — see t
 ## 👨‍💻 Author
 
 College Mini Project — Personal Expense Tracker with GUI Dashboard
+
+Developed as a College Mini Project by:
+
+Aniket Singh - Machine Learning Engineer
+
+Yash Jangid - Lead Statistician
