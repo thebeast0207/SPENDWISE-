@@ -1,109 +1,183 @@
-# SPENDWISE-
-Spendwise is a secure, local-first personal finance ecosystem combining a vanilla JavaScript web SPA and a Pandas-driven Python desktop GUI to deliver real-time asset tracking, multi-token ledger search, and rule-based spending insights with zero cloud dependency.
+# 💸 Spendwise — Personal Finance & Budget Tracker
 
-
-# 💸 Spendwise — AI-Powered Personal Finance & Budget Tracker
-
-> A modern, local-first personal finance ecosystem available as both a **Web Application (SPA)** and a **Python Desktop GUI**. Track expenses, manage budgets, calculate savings goals, and generate automated financial audits—all wrapped in a striking **Brutalist Editorial** design language.
-
-
-## 📸 Overview
-
-Spendwise was developed to bridge the gap between tedious manual spreadsheets and overly complex, cloud-dependent banking apps. By utilizing a **Local-First Architecture**, all financial data is processed directly on the user's machine, ensuring zero latency and absolute data privacy.
-
-The project is dual-platform:
-- **Web App:** A zero-build Single-Page Application (SPA) powered by vanilla JavaScript and Chart.js.
-- **Desktop App:** A robust Python GUI application utilizing CustomTkinter, Pandas, and Matplotlib.
+> A modern, feature-rich personal finance tracker available as both a **web application** and a **desktop GUI application**. Track expenses, manage budgets, set savings goals, and generate financial reports — all with a stunning brutalist editorial design.
 
 ---
 
-## ✨ Key Features
+## 📸 Overview
 
-### 🎨 Brutalist Editorial UI
-Rejects standard "soft" UI trends in favor of massive typography (Syne font), bold geometric borders, high-contrast inversions, and kinetic scroll animations.
+Spendwise is a dual-platform expense tracking system built as a college mini project. It provides:
 
-### 🧠 Smart Algorithmic Insights
-The backend uses a deterministic, rule-based engine to analyze spending patterns. It automatically detects month-over-month spending spikes (>20% delta) and projects savings goal completion dates.
+- **Web App** (`expense_tracker.html`) — A single-page application with a brutalist editorial design, powered by vanilla JavaScript and Chart.js
+- **Desktop App** (`main.py`) — A Python GUI application using CustomTkinter with dark theme, pandas data management, and matplotlib charts
 
-### 🔍 Multi-Token NLP Search
-The transaction ledger features a dynamic live search. Users can type fragmented, conversational queries (e.g., `"food 500"`), and the engine will instantly cross-reference all tokens against every column simultaneously.
+Both apps share the same core features but are independently functional with their own data storage.
 
-### 🎯 Split-Screen Budget Controls
-Set absolute limits per category and track health via a real-time, 3-color status strip:
-* **Green:** Under Budget
-* **Amber:** Nearing Limit (>80%)
-* **Rose:** Over Budget (triggers automated modal alerts)
+---
 
-### 🏆 Gamified Savings Goals
-Create visually engaging, emoji-themed savings goals. Includes an interactive **"What-If" Calculator** to project how extra monthly contributions accelerate your wealth-building timeline.
+## ✨ Features
 
-### 🔐 Hierarchical Security & Data Isolation
-Features a localized authentication system with SHA-256 cryptographic password hashing. Includes a dedicated **Admin Panel** supporting Head Admin and Sub-Admin role assignments.
+### 🏠 Home Page
+- Brutalist editorial design inspired by Ashley Brooke / ABCS aesthetic
+- Massive typography hero section with floating images
+- Animated scroll reveals and parallax effects
+- Interactive services showcase with hover animations
+- Marquee footer with continuous animation
+
+### 📊 Dashboard
+- Real-time financial overview with 5 key metrics (Expenses, Income, Net Yield, Velocity, Budget State)
+- Monthly bar chart (last 12 months — income vs expenses)
+- Category split donut chart
+- Cumulative balance trajectory line chart
+- Budget controls bar chart
+- Smart insights panel with AI-generated financial tips
+- Recent transactions ledger
+
+### ➕ Add Transaction
+- Split editorial layout (hero image left, form right)
+- Giant animated amount input with quick-add chips (₹100, ₹500, ₹1K, ₹5K, ₹10K)
+- Expense/Income toggle with dynamic category switching
+- Real-time quick stats (today, weekly, monthly)
+- Automatic budget alert detection and modal popup
+
+### 🧾 Transactions Ledger
+- Brutalist table with hover-invert animations
+- Multi-token search across all fields
+- Filters: type, month, year, category
+- Sortable by date and amount
+- Row selection with delete capability
+- CSV export
+- Test data generator
+
+### 🎯 Budgets Page
+- Brutalist editorial theme with massive "BUD GETS." header
+- 3-column colored stat strip (Under Budget / Near Limit / Over Budget)
+- Split layout: left panel for setting ₹ limits per category, right panel for live spending status
+- Per-category progress bars with color-coded badges (green/amber/red)
+- Auto-alerts when overspending
+
+### 🏆 Savings Goals Page
+- **Summary Dashboard** — Total Goals, Total Target, Total Saved (with % overall), On Track count, Completed count
+- **Create Goal Bar** — Brutalist inline form to create goals instantly
+- **Active Goals Grid** — Rich goal cards with emoji themes, progress bars, status labels, and action buttons
+- **Savings Insights Panel**:
+  - 🚀 Top Contributors — ranked by progress percentage
+  - 📅 Projected Completion — estimated dates based on monthly savings rate
+  - 💡 What-If Calculator — "If you save ₹X more/month..." interactive projections
+- **Recent Activity Feed** — Last 5 contributions with timestamps ("₹5,000 added to Goa Trip – 2 hours ago")
+- **Recommended Goals** — Smart suggestions (Emergency Fund, Vacation, Gadget, etc.) with one-click creation
+
+### 📈 Reports
+- Monthly period selector
+- Expense category breakdown (pie chart + legend bars)
+- Income vs Expenses comparison (grouped bar chart)
+- Cumulative balance (line chart)
+- CSV and PNG chart exports
+
+### 🔐 Authentication
+- User registration and login
+- Per-user data isolation (transactions, budgets, goals, categories)
+- Admin panel with user management
+- Head Admin + Sub-Admin role hierarchy (max 2 sub-admins)
+- Profile icon with account details modal
+
+### ⚙️ Additional Features
+- Dynamic category management (add/remove expense & income categories)
+- Toast notifications for all actions
+- Budget alert modal popups
+- "Clear All Data" danger button with double confirmation
+- Savings rate progress bar in sidebar
+- Over-budget badge indicator
+- Responsive design for smaller screens
 
 ---
 
 ## 🛠 Technology Stack
 
-### Web Application (Client-Side SPA)
-* **Core:** HTML5, CSS3 (Vanilla), ES6+ JavaScript
-* **Database:** Browser `localStorage` (NoSQL Document Store)
-* **Data Visualization:** Chart.js 4.4
-* **Typography:** Google Fonts (Syne, DM Sans, Playfair Display)
+### Web App
+| Technology | Purpose |
+|---|---|
+| HTML5 | Page structure and semantic elements |
+| CSS3 (Vanilla) | Brutalist editorial design system |
+| JavaScript (ES6+) | Application logic, DOM manipulation, routing |
+| Chart.js 4.4 | Interactive charts (bar, pie, line, doughnut) |
+| Google Fonts | Typography (Syne, DM Sans, Playfair Display) |
+| localStorage | Data persistence (transactions, budgets, goals) |
 
-### Desktop Application (Python GUI)
-* **Core:** Python 3
-* **GUI Framework:** CustomTkinter (Modern Dark Theme)
-* **Data Engine:** Pandas (Dataframe Vectorization & Filtering)
-* **Visualization:** Matplotlib, Seaborn
-* **Database:** Local File System (CSV for ledgers, JSON for configs/auth)
+### Desktop App
+| Technology | Purpose |
+|---|---|
+| Python 3 | Core language |
+| CustomTkinter | Modern dark-themed GUI widgets |
+| pandas | CSV data management and filtering |
+| matplotlib | Chart rendering and PDF export |
+| seaborn | Chart styling |
+| tkinter.ttk | Treeview table widget |
 
 ---
 
 ## 🚀 Getting Started
 
-### Running the Web App
-The web application is completely serverless. 
-1. Clone the repository.
-2. Open `expense_tracker.html` in any modern web browser.
-3. Start tracking!
+### Web App
+Simply open the HTML file in any modern browser:
+```
+expense_tracker.html
+```
+No server or build step required — it's a fully self-contained single-page app.
 
-### Running the Desktop App
-1. Clone the repository.
-2. Ensure you have Python 3 installed.
-3. Install the required dependencies:
-   ```bash
-   pip install customtkinter pandas matplotlib seaborn
+### Desktop App
+1. Install dependencies:
+```bash
+pip install customtkinter pandas matplotlib seaborn
+```
+2. Run:
+```bash
+python main.py
+```
 
+---
 
-### Running the application
+## 📁 Project Structure
 
-1. In bash use
-     python main.py
-
-2. For VS CODE users
-    Firstly install live server extention and then run with live server
-
-
-### Project Architecture 
-
-spendwise/
+```
+speedwise-main/
 ├── expense_tracker.html    # Web app — single-file SPA (HTML + CSS + JS)
+├── brutalist_home.css      # External CSS — brutalist editorial theme
+├── main.py                 # Desktop app — Python GUI (single-file)
+├── README.md               # This file
+├── WALKTHROUGH.md          # Detailed feature walkthrough
+├── IMPLEMENTATION.md       # Technical implementation details
+├── TODO.md                 # Development progress tracker
+└── LICENSE                 # GNU GPL v3
+```
 
-├── brutalist_home.css      # External CSS — brutalist editorial design tokens
+### Data Files (auto-generated at runtime)
+- `expenses_<user>.csv` — Desktop app transaction data
+- `categories_<user>.json` — Desktop app custom categories
+- `goals_<user>.json` — Desktop app savings goals
+- `users.json` — Desktop app user credentials
+- `admins.json` — Desktop app admin list
 
-├── main.py                 # Desktop app — Python GUI & Pandas backend
+---
 
-├── README.md               # Project documentation
+## 🎨 Design Philosophy
 
-├── IMPLEMENTATION.md       # Technical architecture & schema docs
+The web app uses a **Brutalist Editorial** design language:
+- **Massive typography** — Syne font at enormous sizes (up to 150px) for headers
+- **Bold borders** — 2-4px solid borders instead of rounded cards
+- **Zero border-radius** — Square corners everywhere for a raw, editorial feel
+- **High contrast** — Dark/light inversions, vibrant accent colors
+- **Kinetic interactions** — Hover shifts, box-shadow offsets, color inversions
+- **Full-bleed layouts** — Edge-to-edge sections with no padding containers
 
-└── assets/                 # Folder for README screenshots
+---
 
+## 📜 License
 
-### 👨‍💻 Authors & Credits
+This project is licensed under the **GNU General Public License v3.0** — see the [LICENSE](LICENSE) file for details.
 
-Developed as a College Mini Project by:
+---
 
-1.Aniket Singh - Machine Learning Engineer
+## 👨‍💻 Author
 
-2.Yash Jangid - Lead Statistician
+College Mini Project — Personal Expense Tracker with GUI Dashboard
