@@ -6,14 +6,14 @@ Dynamic Status: ✅ **IN PROGRESS** (Web + Desktop)
 ### [x] 1. Project Setup (Completed)
 ```
 ✓ TODO.md created
-✓ API Key: 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 (Groq)
+✓ API Key: INSTERT YOUR API KEY 
 ✓ Target: Both apps (web + desktop)
 ```
 
 ### [✅] 2. Web App (expense_tracker.html) - Priority 1 ✓
 ```
 ✅ Add NLP search bar (gradient UI + Enter key)
-✅ Groq API integration (llama3-8b-8192) 
+✅  API integration (llama3-8b-8192) 
 ✅ SQL WHERE generation → JS filter matching
 ✅ Results: highlighted table + summary footer + toast
 ✅ Reset button clears AI results
